@@ -3,7 +3,7 @@
 import pandas as pd
 import re
 
-df = pd.read_csv('tutorial_reference_files/pokemon_data.csv')
+df = pd.read_csv('pokemon_data.csv')
 
 # Print the first or last rows of the dataframe
 # print(df.tail(3))
@@ -99,7 +99,7 @@ new_df = new_df.reset_index(drop=True)
 
 new_df = pd.DataFrame(columns=df.columns)
 
-for df in pd.read_csv('tutorial_reference_files/modified_pokemon_data.csv', chunksize=5):
+for df in pd.read_csv('modified_pokemon_data.csv', chunksize=5):
     # print(df)
     results = df.groupby(['Type 1']).count()
 
