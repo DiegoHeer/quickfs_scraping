@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import pymsgbox
 from pandas import ExcelWriter
+from filter_fs_data import get_rule_number1_ratios
 
 
 def links_constructor(ticker):
@@ -35,7 +36,7 @@ def get_request(link):
     req = requests.get(link)
 
     if req.json()['errors'] == 'Unknown Symbol':
-        pymsgbox.alert("The ticker entered is invalid. Please enter a new one.")
+        pymsgbox.alert(f"The ticker entered is invalid. Please enter a new one. Link: {link}")
         exit()
 
     # Create a soup object from the request
@@ -82,6 +83,10 @@ def create_dataframe(table_dict):
     # Remove blank rows and the Operating Expenses row from the dataframe
     df = df.loc[df['Category'] != '']
 
+    # Change all numbers stored as text to float
+    for column in df.columns[1:]:
+        df[column] = pd.to_numeric(df[column], errors='coerce')
+
     # Fill in blank cells with NaN
     df = df.fillna(value='NaN')
 
@@ -103,29 +108,45 @@ def gen_financial_excel_file(ticker):
     links = links_constructor(ticker)
     df_dict = scrape_tables(links)
 
+    # *****************TEST TERRITORY**********************************************************
+
+    get_rule_number1_ratios(df_dict)
+
+    # *****************************************************************************************
+
     # Write all the dataframes to separate sheets in a specific excel file
-    output_folder = 'financial_files/'
-    output_path = output_folder + ticker + '.xlsx'
-
-    # Check if file already exists, if yes, delete
-    if os.path.exists(output_path):
-        # Check if the file is not open in another process
-        try:
-            os.remove(output_path)
-        except PermissionError:
-            pymsgbox.alert("The excel file couldn't be generated because it is open in another process.", 'Error')
-            exit()
-
-    # Write the dataframes into an excel file
-    writer = ExcelWriter(output_path)
-    for key in df_dict:
-        df_dict[key].to_excel(excel_writer=writer, sheet_name=key, index=False)
-
-    # Save the excel file
-    writer.save()
-    pymsgbox.confirm(f'The financial excel file for {ticker} has been successfully generated.', 'Success!',
-                     buttons=['OK'])
+    # output_folder = 'financial_files/'
+    # output_path = output_folder + ticker + '.xlsx'
+    #
+    # # Check if file already exists, if yes, delete
+    # if os.path.exists(output_path):
+    #     # Check if the file is not open in another process
+    #     try:
+    #         os.remove(output_path)
+    #     except PermissionError:
+    #         pymsgbox.alert("The excel file couldn't be generated because it is open in another process.", 'Error')
+    #         exit()
+    #
+    # # Write the dataframes into an excel file
+    # writer = ExcelWriter(output_path)
+    # for key in df_dict:
+    #     df_dict[key].to_excel(excel_writer=writer, sheet_name=key, index=False)
+    #
+    # # Save the excel file
+    # writer.save()
+    # pymsgbox.confirm(f'The financial excel file for {ticker} has been successfully generated.', 'Success!',
+    #                  buttons=['OK'])
 
 
 if __name__ == '__main__':
-    gen_financial_excel_file('ARRY')
+    list_with_tickers_from_watchlist = ['STX', 'CRSR', 'LOGI', 'GOOGL', 'NVDA', 'CSCO', 'QCOM', 'ATVI',
+                                        'EBAY', 'EA', 'RYAAY', 'SSNGY', 'GPRO', 'CSIOY', 'PINS', 'SPOT', 'ANSS', 'BA',
+                                        'RYCEF', 'EADSF', 'ERJ', 'BDRAF', 'HXL', 'MELI', 'LTMAQ', 'DAL', 'ESYJY',
+                                        'CPCAY', 'AFLYY', 'AZUL', 'DLAKY']
+
+    gen_financial_excel_file('HAS')
+    # for ticker in list_with_tickers_from_watchlist:
+    #     gen_financial_excel_file(ticker)
+    #
+    # pymsgbox.confirm(f'The financial excel file for the list of tickers has been successfully generated.', 'Success!',
+    #                  buttons=['OK'])

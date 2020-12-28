@@ -21,7 +21,13 @@ df = pd.read_csv('pokemon_data.csv')
 #     print(index, row['Name'])
 
 # Find only the rows with the filter requirement
-# print(df.loc[df['Type 1'] == "Fire"])
+# print(df.loc[df['Name'] == "Ivysaur"])
+new_list = df.loc[df['Name'] == "Ivysaur"].values.flatten().tolist()[1:]
+print(new_list)
+
+# To create a dictionary of the dataframe
+# new_dict = df.to_dict('records')
+# print(new_dict)
 
 # Read a specific location (Row, Column)
 # print(df.iloc[2, 1])
@@ -33,14 +39,14 @@ df = pd.read_csv('pokemon_data.csv')
 # print(df.sort_values(['Type 1', 'HP'], ascending=[False, True]))
 
 # Making changes to data
-df['Total'] = df['HP'] + df['Attack'] + df['Defense'] + df['Sp. Atk'] + df['Sp. Def'] + df['Speed']
+# df['Total'] = df['HP'] + df['Attack'] + df['Defense'] + df['Sp. Atk'] + df['Sp. Def'] + df['Speed']
 
 # Another way to add a column
-df['Total'] = df.iloc[:, 4:10].sum(axis=1)
+# df['Total'] = df.iloc[:, 4:10].sum(axis=1)
 
 # Reposition column
-cols = list(df.columns.values)
-df = df[cols[0:4] + [cols[-1]] + cols[4:12]]
+# cols = list(df.columns.values)
+# df = df[cols[0:4] + [cols[-1]] + cols[4:12]]
 
 # Drop a column
 # df = df.drop(columns=['Speed', 'Generation', 'Legendary', 'Type 1'])
@@ -58,10 +64,10 @@ df = df[cols[0:4] + [cols[-1]] + cols[4:12]]
 
 
 # Advanced filtering data
-new_df = df.loc[(df['Type 1'] == 'Grass') & (df['Type 2'] == 'Poison') & (df['HP'] > 70)]
+# new_df = df.loc[(df['Type 1'] == 'Grass') & (df['Type 2'] == 'Poison') & (df['HP'] > 70)]
 
 # Reset index of new dataframe
-new_df = new_df.reset_index(drop=True)
+# new_df = new_df.reset_index(drop=True)
 # print(new_df)
 
 # filtering with cells that contain a specific substring
@@ -97,12 +103,12 @@ new_df = new_df.reset_index(drop=True)
 
 # Working with large amounts of data
 
-new_df = pd.DataFrame(columns=df.columns)
-
-for df in pd.read_csv('modified_pokemon_data.csv', chunksize=5):
-    # print(df)
-    results = df.groupby(['Type 1']).count()
-
-    new_df = pd.concat([new_df, results])
-
-    print(new_df)
+# new_df = pd.DataFrame(columns=df.columns)
+#
+# for df in pd.read_csv('modified_pokemon_data.csv', chunksize=5):
+#     # print(df)
+#     results = df.groupby(['Type 1']).count()
+#
+#     new_df = pd.concat([new_df, results])
+#
+#     print(new_df)
