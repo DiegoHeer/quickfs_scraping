@@ -1,0 +1,674 @@
+[
+  {
+    "Category": "Revenue",
+    "API Parameter": "revenue",
+    "Financial Statement": "Income Statement",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Cost of Goods Sold",
+    "API Parameter": "cogs",
+    "Financial Statement": "Income Statement",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Gross Profit",
+    "API Parameter": "gross_profit",
+    "Financial Statement": "Income Statement",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Sales, General, & Administrative",
+    "API Parameter": "sga",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Research & Development",
+    "API Parameter": "rnd",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Total Operating Expenses",
+    "API Parameter": "total_opex",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Operating Profit",
+    "API Parameter": "operating_income",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Net Interest Income",
+    "API Parameter": "net_interest_income_normal",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Other Non-Operating Income",
+    "API Parameter": "other_nonoperating_income",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Pre-Tax Income",
+    "API Parameter": "pretax_income",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Income Tax",
+    "API Parameter": "income_tax",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Minority Interest",
+    "API Parameter": "income_allocated_to_minority_interest",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Net Income",
+    "API Parameter": "net_income",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "EPS (Basic)",
+    "API Parameter": "eps_basic",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "EPS (Diluted)",
+    "API Parameter": "eps_diluted",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Shares (Basic)",
+    "API Parameter": "shares_basic",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Shares (Diluted)",
+    "API Parameter": "shares_diluted",
+    "Financial Statement": "Income Statement",
+    "Topic": "Operating Expenses"
+  },
+  {
+    "Category": "Cash & Equivalents",
+    "API Parameter": "cash_and_equiv",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Short-Term Investments",
+    "API Parameter": "st_investments",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Accounts Receivable",
+    "API Parameter": "receivables",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Inventories",
+    "API Parameter": "inventories",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Other Current Assets",
+    "API Parameter": "other_current_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Total Current Assets",
+    "API Parameter": "total_current_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Investments",
+    "API Parameter": "equity_and_other_investments",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Property, Plant, & Equipment (Net)",
+    "API Parameter": "ppe_net",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Goodwill",
+    "API Parameter": "goodwill",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Other Intangible Assets",
+    "API Parameter": "intangible_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Other Assets",
+    "API Parameter": "other_lt_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Total Assets",
+    "API Parameter": "total_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Assets"
+  },
+  {
+    "Category": "Accounts Payable",
+    "API Parameter": "accounts_payable",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Tax Payable",
+    "API Parameter": "tax_payable",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Accrued Liabilities",
+    "API Parameter": "current_accrued_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Short-Term Debt",
+    "API Parameter": "st_debt",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Deferred Revenue",
+    "API Parameter": "current_deferred_revenue",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Deferred Tax Liability",
+    "API Parameter": "current_deferred_tax_liability",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Other Current Liabilities",
+    "API Parameter": "other_current_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Total Current Liabilities",
+    "API Parameter": "total_current_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Long-Term Debt",
+    "API Parameter": "lt_debt",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Capital Leases",
+    "API Parameter": "noncurrent_capital_leases",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Pension Liabilities",
+    "API Parameter": "pension_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Deferred Revenue",
+    "API Parameter": "noncurrent_deferred_revenue",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Other Liabilities",
+    "API Parameter": "other_lt_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Total Liabilities",
+    "API Parameter": "total_liabilities",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Retained Earnings",
+    "API Parameter": "retained_earnings",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Paid-in Capital",
+    "API Parameter": "apic",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Common Stock",
+    "API Parameter": "common_stock",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "AOCI",
+    "API Parameter": "aoci",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Minority Interest",
+    "API Parameter": "minority_interest_liability",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Treasury Stock",
+    "API Parameter": "treasury_stock",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Shareholders' Equity",
+    "API Parameter": "total_equity",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Liabilities & Equity",
+    "API Parameter": "total_assets",
+    "Financial Statement": "Balance Sheet",
+    "Topic": "Liabilities & Equity"
+  },
+  {
+    "Category": "Net Income",
+    "API Parameter": "net_income_continuing",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Depreciation & Amortization",
+    "API Parameter": "cfo_da",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Change in Working Capital",
+    "API Parameter": "cfo_change_in_working_capital",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Change in Deferred Tax",
+    "API Parameter": "cfo_deferred_tax",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Stock-Based Compensation",
+    "API Parameter": "cfo_stock_comp",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Other",
+    "API Parameter": "cfo_other_noncash_items",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Cash From Operations",
+    "API Parameter": "cf_cfo",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Property, Plant, & Equipment",
+    "API Parameter": "cfi_ppe_net",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Acquisitions",
+    "API Parameter": "cfi_acquisitions_net",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Investments",
+    "API Parameter": "cfi_investment_net",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Other",
+    "API Parameter": "cfi_other",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Cash From Investing",
+    "API Parameter": "cf_cfi",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Net Issuance of Common Stock",
+    "API Parameter": "cff_common_stock_net",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Net Issuance of Debt",
+    "API Parameter": "cff_debt_net",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Cash Paid for Dividends",
+    "API Parameter": "cff_dividend_paid",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Other",
+    "API Parameter": "cff_other",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Cash From Financing",
+    "API Parameter": "cf_cff",
+    "Financial Statement": "Cash Flow",
+    "Topic": "NaN"
+  },
+  {
+    "Category": "Return on Assets",
+    "API Parameter": "roa",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Returns"
+  },
+  {
+    "Category": "Return on Equity",
+    "API Parameter": "roe",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Returns"
+  },
+  {
+    "Category": "Return on Invested Capital",
+    "API Parameter": "roic",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Returns"
+  },
+  {
+    "Category": "Return on Capital Employed",
+    "API Parameter": "roce",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Returns"
+  },
+  {
+    "Category": "Return on Tangible Capital Employed",
+    "API Parameter": "rotce",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Returns"
+  },
+  {
+    "Category": "Gross Margin",
+    "API Parameter": "gross_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "EBITDA Margin",
+    "API Parameter": "ebitda_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "Operating Margin",
+    "API Parameter": "operating_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "Pretax Margin",
+    "API Parameter": "pretax_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "Net Margin",
+    "API Parameter": "net_income_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "Free Cash Margin",
+    "API Parameter": "fcf_margin",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Margins as % of Revenue"
+  },
+  {
+    "Category": "Assets to Equity",
+    "API Parameter": "assets_to_equity",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Capital Structure"
+  },
+  {
+    "Category": "Equity to Assets",
+    "API Parameter": "equity_to_assets",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Capital Structure"
+  },
+  {
+    "Category": "Debt to Equity",
+    "API Parameter": "debt_to_equity",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Capital Structure"
+  },
+  {
+    "Category": "Debt to Assets",
+    "API Parameter": "debt_to_assets",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Capital Structure"
+  },
+  {
+    "Category": "Revenue",
+    "API Parameter": "revenue_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Gross Profit",
+    "API Parameter": "gross_profit_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "EBITDA",
+    "API Parameter": "ebitda_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Operating Income",
+    "API Parameter": "operating_income_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Pretax Income",
+    "API Parameter": "pretax_income_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Net Income",
+    "API Parameter": "net_income_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Diluted EPS",
+    "API Parameter": "eps_diluted_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Diluted Shares",
+    "API Parameter": "shares_diluted_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "PP&E",
+    "API Parameter": "ppe_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Total Assets",
+    "API Parameter": "total_assets_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Equity",
+    "API Parameter": "total_equity_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Cash from Operations",
+    "API Parameter": "cfo_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Capital Expenditures",
+    "API Parameter": "capex_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Free Cash Flow",
+    "API Parameter": "fcf_growth",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Year-Over-Year Growth"
+  },
+  {
+    "Category": "Free Cash Flow",
+    "API Parameter": "fcf",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Supplementary Items"
+  },
+  {
+    "Category": "Book Value",
+    "API Parameter": "book_value",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Supplementary Items"
+  },
+  {
+    "Category": "Tangible Book Value",
+    "API Parameter": "tangible_book_value",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Supplementary Items"
+  },
+  {
+    "Category": "Revenue",
+    "API Parameter": "revenue_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "EBITDA",
+    "API Parameter": "ebitda_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "Operating Income",
+    "API Parameter": "operating_income_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "Free Cash Flow",
+    "API Parameter": "fcf_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "Book Value",
+    "API Parameter": "book_value_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "Tangible Book Value",
+    "API Parameter": "tangible_book_per_share",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Per-Share Items"
+  },
+  {
+    "Category": "Market Capitalization",
+    "API Parameter": "market_cap",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Valuation Metrics"
+  },
+  {
+    "Category": "Price-to-Earnings",
+    "API Parameter": "price_to_earnings",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Valuation Metrics"
+  },
+  {
+    "Category": "Price-to-Book",
+    "API Parameter": "price_to_book",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Valuation Metrics"
+  },
+  {
+    "Category": "Price-to-Sales",
+    "API Parameter": "price_to_sales",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Valuation Metrics"
+  },
+  {
+    "Category": "Dividends per share",
+    "API Parameter": "dividends",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Dividends"
+  },
+  {
+    "Category": "Payout Ratio",
+    "API Parameter": "payout_ratio",
+    "Financial Statement": "Key Ratios",
+    "Topic": "Dividends"
+  }
+]
