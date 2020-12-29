@@ -1,0 +1,2816 @@
+{
+  "data": [
+    {
+      "metric": "revenue",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cogs",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "gross_profit",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "sga",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "rnd",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "special_charges",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_opex",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_opex",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "operating_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_income_normal",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_nonoperating_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "pretax_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "income_tax",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income_continuing",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "interest_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "interest_expense",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income_discontinued",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "income_allocated_to_minority_interest",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_income_statement_items",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "preferred_dividends",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income_available_to_shareholders",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "eps_basic",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "eps_diluted",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "shares_basic",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "shares_diluted",
+      "statement_type": "income_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cash_and_equiv",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "st_investments",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "receivables",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "inventories",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_current_assets",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_current_assets",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "equity_and_other_investments",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ppe_gross",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "accumulated_depreciation",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ppe_net",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "intangible_assets",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "goodwill",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_lt_assets",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_assets",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "accounts_payable",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "tax_payable",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "current_accrued_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "st_debt",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "current_deferred_revenue",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "current_deferred_tax_liability",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_current_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_current_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "lt_debt",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "noncurrent_capital_leases",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "pension_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "noncurrent_deferred_revenue",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_lt_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_liabilities",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "common_stock",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "preferred_stock",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "retained_earnings",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "aoci",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "apic",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "treasury_stock",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "other_equity",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "minority_interest_liability",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_equity",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_liabilities_and_equity",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "long_term_debt_and_capital_lease_obligation",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_net_income",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_da",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_receivables",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_inventory",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_prepaid_expenses",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_other_working_capital",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_change_in_working_capital",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_deferred_tax",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_stock_comp",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_other_noncash_items",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cf_cfo",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfi_ppe_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfi_acquisitions_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfi_investment_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfi_intangibles_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfi_other",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cf_cfi",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cff_common_stock_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cff_pfd_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cff_debt_net",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cff_dividend_paid",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cff_other",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cf_cff",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cf_forex",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cf_net_change_in_cash",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "capex",
+      "statement_type": "cash_flow_statement",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ebitda",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fcf",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "book_value",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "tangible_book_value",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roa",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roe",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roic",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roce",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "rotce",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "gross_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ebitda_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "operating_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "pretax_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fcf_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "assets_to_equity",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "equity_to_assets",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "debt_to_equity",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "debt_to_assets",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "revenue_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ebitda_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "operating_income_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "pretax_income_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fcf_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "book_value_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "tangible_book_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "market_cap",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_earnings",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_book",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_tangible_book",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_sales",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_fcf",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "price_to_pretax_income",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_earnings",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_book",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_tangible_book",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_sales",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_fcf",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "enterprise_value_to_pretax_income",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "revenue_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "gross_profit_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ebitda_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "operating_income_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "pretax_income_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_income_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "eps_diluted_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "shares_diluted_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cash_and_equiv_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "ppe_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_assets_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_equity_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "cfo_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "capex_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fcf_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "revenue_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "eps_diluted_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_assets_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_equity_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fcf_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "payout_ratio",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "shares_eop",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "dividends",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "period_end_price",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "gross_margin_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "pretax_margin_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "operating_income_margin_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "fcf_margin_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "roa_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "roe_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "roic_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "assets_to_equity_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal",
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "debt_to_assets_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "debt_to_equity_median",
+      "statement_type": "computed",
+      "company_types": [
+        "normal"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "total_interest_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_interest_expense",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_noninterest_revenue",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "credit_losses_provision",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_income_after_credit_losses_provision",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_noninterest_expense",
+      "statement_type": "income_statement",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_gross",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "allowance_for_loan_losses",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_net",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_investments",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "deposits_liability",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "earning_assets",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "earning_assets_to_equity",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_to_deposits",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loan_loss_reserve_to_loans",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_income_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_gross_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_net_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "deposits_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "earning_assets_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_interest_income_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "loans_gross_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "earning_assets_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "deposits_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "nim_median",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "earning_assets_to_equity_median",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "equity_to_assets_median",
+      "statement_type": "computed",
+      "company_types": [
+        "bank",
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "loans_to_deposits_median",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "loan_loss_reserve_to_loans_median",
+      "statement_type": "computed",
+      "company_types": [
+        "bank"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "premiums_earned",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_investment_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "fees_and_other_income",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "net_policyholder_claims_expense",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "policy_acquisition_expense",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "interest_expense_insurance",
+      "statement_type": "income_statement",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "deferred_policy_acquisition_cost",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "unearned_premiums",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "future_policy_benefits",
+      "statement_type": "balance_sheet",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "policy_revenue",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "underwriting_profit",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roi",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "underwriting_margin",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "premiums_per_share",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "premiums_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "policy_revenue_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_investments_growth",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "premiums_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "total_investments_cagr_10",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "roi_median",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "underwriting_margin_median",
+      "statement_type": "computed",
+      "company_types": [
+        "insurance"
+      ],
+      "data_type": "number",
+      "periods": []
+    },
+    {
+      "metric": "period_end_date",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "insurance",
+        "bank"
+      ],
+      "data_type": "string",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "original_filing_date",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "insurance",
+        "bank"
+      ],
+      "data_type": "string",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    },
+    {
+      "metric": "restated_filing_date",
+      "statement_type": "misc",
+      "company_types": [
+        "normal",
+        "insurance",
+        "bank"
+      ],
+      "data_type": "string",
+      "periods": [
+        "FY",
+        "FQ"
+      ]
+    }
+  ]
+}
