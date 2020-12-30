@@ -5,14 +5,15 @@ import pymsgbox
 import numpy as np
 
 from general import check_request_status, load_quickfs_help_file
+from proxy_rotation import fetch
 
 
 def links_constructor(ticker):
     base_url = r"https://api.quickfs.net/stocks/"
-    api_key = r"grL0gNYoMoLUB1ZoAKLfhXkoMoLODiO1WoL9" \
-              r".grLtk3PoMoLmqFEsMasbNK9fkXudkNBtR2jpkr5dINZoAKLtRNZoMlG2PQx5WixrPJRcOpEfqXGoMwcoqNWaka9tIKO6OlG1MQ" \
-              r"k0OosoIS1fySsoMoLuySBwh2tbhpV0yXVdyXBakuHwhSVthK5lh20oAKLsRNWiq29rIKO6OaWIJQufWG1Vq1RrZuWSIKOcOwHry" \
-              r"NIthXBwICO6PKsokpBwyS9dDFLtqoO6grLBDrO6PCsoZ0GoMlH9vN0.o51zrquUvS_VCyK9uIgYM4RLZP4gu2VairnipVf8mEG"
+    api_key = r"grL0gNYoMoLUB1ZoAKLfhXkoMoLODiO1WoL9.grLtk3PoMoLmqFEsMasbNK9fkXudkNBtR2jpkr5dINZoAKLtRNZoMl" \
+              r"G2PQuiWQknWJOcOpEfqXGoMwcoqNWaka9tIKO6OlG1MQk0OosoIS1fySsoMoLuySBwh2tbhpV0yXVdyXBakuHwhSVthK" \
+              r"5lh20oAKLsRNWiq29rIKO6OaWIJQufWG1Vq1RrZuWSIKOcOwHryNIthXBwICO6PKsokpBwyS9dDFLtqoO6grLBDrO6PCs" \
+              r"oZ0GoMlH9vN0.sbxSI5du4jS2FlR0-qktBT62siUOb1_YMMWYs3GDYou"
 
     # There are 5 types of tables that will be extracted: overview, income statement, balance sheet, cash flow and
     # key ratios
@@ -31,17 +32,18 @@ def links_constructor(ticker):
     return url_links
 
 
-def get_scraping_request(link):
-    # Request data from link
-    req = requests.get(link)
+def get_scraping_request(link, site='quickfs'):
+    # Fetch request using a proxy rotation method
+    req = fetch(link)
 
     # check request status
     check_request_status(req)
 
     # Identify if ticker entered is valid
-    if req.json()['errors'] == 'Unknown Symbol':
-        pymsgbox.alert(f"The ticker entered is invalid. Please enter a new one. Link: {link}")
-        exit()
+    if site == 'quickfs':
+        if req.json()['errors'] == 'Unknown Symbol':
+            pymsgbox.alert(f"The ticker entered is invalid. Please enter a new one. Link: {link}")
+            exit()
 
     # Create a soup object from the request
     soup = BeautifulSoup(req.content, features='lxml')
@@ -92,7 +94,7 @@ def web_scrape_to_dataframe(table_dict):
         df[column] = pd.to_numeric(df[column], errors='coerce')
 
     # Fill in blank cells with NaN
-    df = df.fillna(value='NaN')
+    df = df.fillna(value=np.nan)
 
     return df
 
@@ -173,3 +175,16 @@ def merge_fs_dataframes(df_dict):
         concat_df = concat_df.drop(columns=[list(concat_df.columns.values)[-1]])
 
     return concat_df
+
+
+def scrape_yahoo_analyst_growth_rate(ticker):
+    base_url = f"https://finance.yahoo.com/quote/{ticker}/analysis?p={ticker}"
+
+    soup = get_scraping_request(base_url, site='yahoo-finance')
+
+    all_tables = soup.find_all('table')
+    analyst_growth_rate = soup.find('td', attrs={"data-reactid": "427"}).text
+    analyst_growth_rate = float(analyst_growth_rate.replace('%', ''))/100
+
+    return analyst_growth_rate
+

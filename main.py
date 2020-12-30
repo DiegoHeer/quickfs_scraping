@@ -8,6 +8,11 @@ from api_scraping import get_api_request, create_dataframe_from_api
 from filter_fs_data import get_rule_number1_ratios
 
 
+# This project focus on scraping financial data from the quickfs.com website and process it to Rule #1 output data
+# Other sites that can be used for scraping are:
+# https://www.rocketfinancial.com/
+
+
 def gen_financial_data_frame(ticker):
     # Financial Table Types that will be scraped
 
@@ -31,8 +36,6 @@ def gen_financial_data_frame(ticker):
         else:
             df_fs = excel_to_dataframe(excel_output_path)
 
-        data_source = 'scraping'
-
     else:
         if not check_validity_output_file(json_output_path):
             json_file = get_api_request(ticker)
@@ -42,11 +45,10 @@ def gen_financial_data_frame(ticker):
                 json_file = json.load(file)
 
         df_fs = create_dataframe_from_api(json_file)
-        data_source = 'api'
 
     # *****************TEST TERRITORY**********************************************************
 
-    get_rule_number1_ratios(df_fs, data_source)
+    get_rule_number1_ratios(df_fs, ticker)
 
     # *****************************************************************************************
 
@@ -57,4 +59,4 @@ if __name__ == '__main__':
                                         'RYCEF', 'EADSF', 'ERJ', 'BDRAF', 'HXL', 'MELI', 'LTMAQ', 'DAL', 'ESYJY',
                                         'CPCAY', 'AFLYY', 'AZUL', 'DLAKY']
 
-    gen_financial_data_frame('TSLA')
+    gen_financial_data_frame('QCOM')
