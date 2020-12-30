@@ -5,7 +5,10 @@ from datetime import datetime
 from dateutil.relativedelta import *
 import pymsgbox
 import shutil
+import openpyxl
 from pandas import ExcelWriter
+from openpyxl.worksheet.table import Table, TableStyleInfo
+from openpyxl.styles import colors, Font
 
 
 def check_request_status(req):
@@ -80,21 +83,16 @@ def check_validity_output_file(output_file_path):
 
 def save_json_request_to_file(json_file, json_file_path):
     with open(json_file_path, 'w') as file:
-        json.dump(json_file, file)
+        json.dump(json_file, file, indent=4, sort_keys=True)
 
 
-def excel_to_dataframe(excel_output_path, table_names):
-    df_dict = dict()
-    for fs_name in table_names:
-        excel_file = pd.ExcelFile(excel_output_path, engine='openpyxl')
-        df_dict[fs_name] = pd.read_excel(excel_file, sheet_name=fs_name)
-        print(df_dict[fs_name])
-        break
+def excel_to_dataframe(excel_output_path):
+    excel_file = pd.ExcelFile(excel_output_path, engine='openpyxl')
 
-    return df_dict
+    return pd.read_excel(excel_file, sheet_name='financial_data')
 
 
-def create_fs_excel_file(excel_output_path, df_dict, ticker):
+def create_fs_excel_file(excel_output_path, df, ticker):
     # Check if file already exists, if yes, delete
     if os.path.exists(excel_output_path):
         # Check if the file is not open in another process
@@ -106,11 +104,31 @@ def create_fs_excel_file(excel_output_path, df_dict, ticker):
 
     # Write the dataframes into an excel file
     writer = ExcelWriter(excel_output_path)
-    for key in df_dict:
-        df_dict[key].to_excel(excel_writer=writer, sheet_name=key, index=False)
-
-    # Save the excel file
+    sheet_name = 'financial_data'
+    df.to_excel(excel_writer=writer, sheet_name=sheet_name, index=False)
     writer.save()
+
+    # Convert data in excel file to table format
+    wb = openpyxl.load_workbook(filename=excel_output_path)
+
+    # Create table
+    tab = Table(displayName="financial_data", ref=f'A1:{chr(len(df.columns) + 64)}{len(df) + 1}')
+
+    # Add a default style with striped rows and banded columns
+    style = TableStyleInfo(name="TableStyleMedium9", showFirstColumn=False,
+                           showLastColumn=False, showRowStripes=True, showColumnStripes=False)
+    tab.tableStyleInfo = style
+
+    # Change header font color
+    # ws = wb[sheet_name]
+    # header_col = ws.row_dimensions[1]
+    # header_col.font = Font(color=colors.WHITE)
+
+    # Add table to sheet and save workbook
+    wb[sheet_name].add_table(tab)
+    wb.save(excel_output_path)
+
+    # Success message
     pymsgbox.confirm(f'The financial excel file for {ticker} has been successfully generated.', 'Success!',
                      buttons=['OK'])
 
@@ -122,3 +140,20 @@ def gen_compatible_api_dict(data_dict):
         data_file['data']['financials']['annual'][key] = value
 
     return data_file
+
+
+def remove_non_existent_data_from_dict(data_dict):
+    # This function removes zero entries in data_dict if they exist. This is possible because maybe the company
+    # doesn't has stock data for a certain period
+
+    # Create dataframe for easier parsing
+    df = pd.DataFrame(data_dict['data']['financials']['annual'])
+
+    # Delete rows where the period_end_date value is zero
+    df = df[df['period_end_date'] != 0]
+
+    # Change dataframe back to dictionary
+    data_dict = df.to_dict('list')
+    data_dict = gen_compatible_api_dict(data_dict)
+
+    return data_dict

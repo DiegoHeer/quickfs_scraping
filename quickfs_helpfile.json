@@ -4,19 +4,19 @@
       "Category": "Revenue",
       "API Parameter": "revenue",
       "Financial Statement": "income statement",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cost of Goods Sold",
       "API Parameter": "cogs",
       "Financial Statement": "income statement",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Gross Profit",
       "API Parameter": "gross_profit",
       "Financial Statement": "income statement",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Sales, General, & Administrative",
@@ -310,103 +310,103 @@
       "Category": "Net Income",
       "API Parameter": "net_income_continuing",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Depreciation & Amortization",
       "API Parameter": "cfo_da",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Change in Working Capital",
       "API Parameter": "cfo_change_in_working_capital",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Change in Deferred Tax",
       "API Parameter": "cfo_deferred_tax",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Stock-Based Compensation",
       "API Parameter": "cfo_stock_comp",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Other",
       "API Parameter": "cfo_other_noncash_items",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cash From Operations",
       "API Parameter": "cf_cfo",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Property, Plant, & Equipment",
       "API Parameter": "cfi_ppe_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Acquisitions",
       "API Parameter": "cfi_acquisitions_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Investments",
       "API Parameter": "cfi_investment_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Other",
       "API Parameter": "cfi_other",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cash From Investing",
       "API Parameter": "cf_cfi",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Net Issuance of Common Stock",
       "API Parameter": "cff_common_stock_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Net Issuance of Debt",
       "API Parameter": "cff_debt_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cash Paid for Dividends",
       "API Parameter": "cff_dividend_paid",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Other",
       "API Parameter": "cff_other",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cash From Financing",
       "API Parameter": "cf_cff",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Return on Assets",
@@ -738,19 +738,19 @@
       "Category": "Revenue",
       "API Parameter": "revenue",
       "Financial Statement": "income statement",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Cash From Operations",
       "API Parameter": "cf_cfo",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Property, Plant, & Equipment",
       "API Parameter": "cfi_ppe_net",
       "Financial Statement": "cash flow",
-      "Topic": "NaN"
+      "Topic": ""
     },
     {
       "Category": "Price-to-Earnings",

@@ -2,11 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import pymsgbox
+import numpy as np
 
-from general import check_request_status
+from general import check_request_status, load_quickfs_help_file
 
 
-def links_constructor(ticker, table_names):
+def links_constructor(ticker):
     base_url = r"https://api.quickfs.net/stocks/"
     api_key = r"grL0gNYoMoLUB1ZoAKLfhXkoMoLODiO1WoL9" \
               r".grLtk3PoMoLmqFEsMasbNK9fkXudkNBtR2jpkr5dINZoAKLtRNZoMlG2PQx5WixrPJRcOpEfqXGoMwcoqNWaka9tIKO6OlG1MQ" \
@@ -15,6 +16,7 @@ def links_constructor(ticker, table_names):
 
     # There are 5 types of tables that will be extracted: overview, income statement, balance sheet, cash flow and
     # key ratios
+    table_names = ['income statement', 'balance sheet', 'cash flow', 'key ratios']
     table_types = ['is', 'bs', 'cf', 'ratios']
 
     # The timeframe used will be annual
@@ -103,4 +105,71 @@ def scrape_tables(url_links):
         df = web_scrape_to_dataframe(fs_table)
         dataframe_dict[key] = df
 
-    return dataframe_dict
+    # Merge the dataframes to a single one
+    merged_df = merge_fs_dataframes(dataframe_dict)
+
+    return merged_df
+
+
+def merge_fs_dataframes(df_dict):
+    help_file = load_quickfs_help_file()['Translation List']
+
+    df_help = pd.DataFrame(help_file)
+
+    processed_df_list = list()
+
+    for key, df in df_dict.items():
+        # Change the category column to index
+        df = df.set_index('Category')
+
+        # Create the Topic column
+        df.insert(0, 'Topic', "")
+
+        # Identify the indexes which only has NaN values
+        nan_indexes = np.where(np.isnan(df[df.columns[1]]))[0]
+
+        # enter the topics in the dataframe on the correct position, if there are any
+        if len(nan_indexes) > 0:
+            for idx in nan_indexes:
+                topic_name = list(df.index)[idx]
+
+                for iteration in range(idx, df.shape[0]):
+                    df.iat[iteration, df.columns.get_loc('Topic')] = topic_name
+
+                # For the NaN rows, remove the topic
+                df.iat[idx, df.columns.get_loc('Topic')] = np.nan
+
+        # Remove all rows that only contain NaN's
+        df = df.dropna(axis=0, how='all')
+
+        # # Create a 'TTM' column on the dataframes that don't have it
+        if not 'TTM' in df.columns:
+            df['TTM'] = 'NaN'
+
+        # Include column with the financial statement type
+        df.insert(0, 'Financial Statement', key)
+
+        # Apply NaN to the blank cells
+        df.replace(r'', r'NaN')
+
+        # Create the Category column again and cleanse the index
+        df.reset_index(level=0, inplace=True)
+
+        # Match the the correct indexes to enter the API Parameter in the right spot
+        df = df.merge(df_help, how='left', left_on=['Category', 'Topic', 'Financial Statement'],
+                      right_on=['Category', 'Topic', 'Financial Statement'])
+
+        # Change order of the API Parameter column in dataframe
+        cols = list(df.columns.values)
+        df = df[[cols[0]] + [cols[-1]] + cols[1:-1]]
+
+        processed_df_list.append(df)
+
+    # Concatenate all dataframes into one
+    concat_df = pd.concat(processed_df_list)
+
+    # Remove last row if ot isn't 'TTM'
+    if concat_df.columns[-1] != 'TTM':
+        concat_df = concat_df.drop(columns=[list(concat_df.columns.values)[-1]])
+
+    return concat_df
