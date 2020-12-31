@@ -3,7 +3,8 @@ import os
 import pathlib
 import pymsgbox
 
-from general import check_validity_output_file, excel_to_dataframe, create_fs_excel_file, save_json_request_to_file
+from excel_handler import excel_to_dataframe, create_fs_excel_file
+from general import check_validity_output_file, save_json_request_to_file
 from web_scraping import links_constructor, scrape_tables
 from api_scraping import get_api_request, create_dataframe_from_api
 from filter_fs_data import get_rule_number1_ratios

@@ -1,4 +1,3 @@
-import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import pymsgbox
@@ -182,9 +181,7 @@ def scrape_yahoo_analyst_growth_rate(ticker):
 
     soup = get_scraping_request(base_url, site='yahoo-finance')
 
-    all_tables = soup.find_all('table')
     analyst_growth_rate = soup.find('td', attrs={"data-reactid": "427"}).text
-    analyst_growth_rate = float(analyst_growth_rate.replace('%', ''))/100
+    analyst_growth_rate = float(analyst_growth_rate.replace('%', '')) / 100
 
     return analyst_growth_rate
-
