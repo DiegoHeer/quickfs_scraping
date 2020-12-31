@@ -95,7 +95,17 @@ def scrape_yahoo_analyst_growth_rate(ticker):
 
     soup = get_scraping_request(base_url, site='yahoo-finance')
 
-    analyst_growth_rate = soup.find('td', attrs={"data-reactid": "427"}).text
-    analyst_growth_rate = float(analyst_growth_rate.replace('%', '')) / 100
+    try:
+        growth_rate_5_years_row = soup.body.find('td', text='Next 5 Years (per annum)').parent
+        growth_rate_1_year_row = soup.body.find('td', text='Next Year').parent
+        growth_rate_5_years = growth_rate_5_years_row.find_all('td')[1].text
+        growth_rate_1_year = growth_rate_1_year_row.find_all('td')[1].text
+    except AttributeError:
+        return 0
 
-    return analyst_growth_rate
+    if growth_rate_5_years != 'N/A':
+        return float(growth_rate_5_years.replace('%', '')) / 100
+    elif growth_rate_1_year != 'N/A':
+        return float(growth_rate_1_year.replace('%', '')) / 100
+    else:
+        return 0

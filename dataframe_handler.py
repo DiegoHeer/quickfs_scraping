@@ -126,7 +126,11 @@ def rule1_results_to_dataframe(results_dict):
         for key, value in item_dict.items():
             metric_name = main_metric + " - " + key
             df_dict['Rule #1 Metric'].append(metric_name)
-            df_dict['Value'].append(value)
+
+            if 'growth rate' in metric_name.lower() or 'roic' in metric_name.lower():
+                df_dict['Value'].append('{percent:.2%}'.format(percent=value))
+            else:
+                df_dict['Value'].append(value)
 
     # MOS numbers
     for metric, value in results_dict['mos'].items():

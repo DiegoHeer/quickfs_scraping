@@ -119,17 +119,7 @@ def get_moat_ratios(df, ticker):
     # Input for Equity Growth Rate
     # BVPS: Book Value per Share = Book Value/Shares(Diluted)
     # Book Value = Shareholders' Equity
-
-    book_value = shareholder_equity
-    shares_diluted = df.loc['shares_diluted'].to_dict()
-    bvps = list()
-
-    # Calculations
-    for year in year_list:
-        bvps.append(book_value[year] / shares_diluted[year])
-
-    # Book Value per Share calculated by QuickFS
-    bvps_quickfs = df.loc['book_value_per_share'].tolist()
+    bvps = df.loc['book_value_per_share'].tolist()
 
     # Input for EPS Growth Rate
     eps = df.loc['eps_diluted'].tolist()
@@ -142,23 +132,24 @@ def get_moat_ratios(df, ticker):
     # Free Cash Flow: FCF = OCF - PPE
     # OCF: Operating Cash Flow
     # PPE: Property, Plant & Equipment
-    ocf = df.loc['cf_cfo'].to_dict()
-    ppe = df.loc['cfi_ppe_net'].to_dict()
-    fcf = list()
-
-    for year in year_list:
-        fcf.append(ocf[year] - abs(ppe[year]))
+    # ocf = df.loc['cf_cfo'].to_dict()
+    # ppe = df.loc['cfi_ppe_net'].to_dict()
+    # fcf = list()
+    #
+    # for year in year_list:
+    #     fcf.append(ocf[year] - abs(ppe[year]))
 
     # Free Cash Flow calculated by QuickFS
-    fcf_quickfs = df.loc['fcf'].tolist()
+    # fcf_quickfs = df.loc['fcf'].tolist()
+    fcf = df.loc['fcf'].tolist()
 
     # Input for Operating Cash Flow Growth Rate
     # OCF: Operating Cash Flow
     ocf_list = df.loc['cf_cfo'].tolist()
 
     # Calculation of all growth rates
-    key_list_growth_rates = ['Equity', 'Equity QuickFS', 'EPS', 'Sales', 'FCF', 'FCF QuickFS', 'OCF']
-    value_list_growth_rates = [bvps, bvps_quickfs, eps, sales, fcf, fcf_quickfs, ocf_list]
+    key_list_growth_rates = ['Equity', 'EPS', 'Sales', 'FCF', 'OCF']
+    value_list_growth_rates = [bvps, eps, sales, fcf, ocf_list]
 
     for i, value in enumerate(value_list_growth_rates):
         # Current value and max future value

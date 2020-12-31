@@ -49,9 +49,26 @@ def load_quickfs_help_file():
     return help_file
 
 
+def is_file_available(file_path):
+    try:
+        file_path_name = os.path.splitext(file_path)[0]
+        file_path_ext = os.path.splitext(file_path)[1]
+        temp_name = file_path_name + "_temp" + file_path_ext
+
+        os.rename(file_path, temp_name)
+        os.rename(temp_name, file_path)
+    except OSError:
+        pymsgbox.alert(f"File: '{file_path}' is being used by another process. Please close it before continuing",
+                       "File not available")
+        exit()
+
+
 def check_validity_output_file(output_file_path):
     # Check if file exists
     if os.path.exists(output_file_path):
+        # Check if file is being used by another process
+        is_file_available(output_file_path)
+
         # Check in which date it has been created
         creation_date = datetime.fromtimestamp(os.path.getctime(output_file_path)).date()
         current_date = datetime.now().date()

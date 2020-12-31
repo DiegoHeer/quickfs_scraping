@@ -16,12 +16,15 @@ from filter_fs_data import get_rule_number1_ratios
 # https://www.rocketfinancial.com/
 
 
-def gen_financial_data_frame(ticker):
+def gen_financial_data_frame(ticker, bool_batch=False):
     # Financial Table Types that will be scraped
 
     # Let user choose the solution for getting the data: Either scraping or using API
-    scraping_method = pymsgbox.confirm(f'What method do you want to use to get the financial data from {ticker}?',
-                                       'Select Option', buttons=['API', 'Web Scraping'])
+    if not bool_batch:
+        scraping_method = pymsgbox.confirm(f'What method do you want to use to get the financial data from {ticker}?',
+                                           'Select Option', buttons=['API', 'Web Scraping'])
+    else:
+        scraping_method = 'API'
 
     # Output folders
     work_directory = pathlib.Path(__file__).parent.absolute()
@@ -41,7 +44,7 @@ def gen_financial_data_frame(ticker):
 
     else:
         if not check_validity_output_file(json_output_path):
-            json_file = get_api_request(ticker)
+            json_file = get_api_request(ticker, bool_batch=bool_batch)
             save_json_request_to_file(json_file, json_output_path)
         else:
             with open(json_output_path, 'r') as file:
@@ -56,7 +59,7 @@ def gen_financial_data_frame(ticker):
     dataframe_to_excel(excel_output_path, df_fs, ticker, source=scraping_method, bool_batch=True)
 
     # Output all the Rule #1 results into the excel file
-    dataframe_to_excel(excel_output_path, results_df, ticker, source='filter_fs_data')
+    dataframe_to_excel(excel_output_path, results_df, ticker, source='filter_fs_data', bool_batch=bool_batch)
 
 
 if __name__ == '__main__':
@@ -65,4 +68,4 @@ if __name__ == '__main__':
                                         'RYCEF', 'EADSF', 'ERJ', 'BDRAF', 'HXL', 'MELI', 'LTMAQ', 'DAL', 'ESYJY',
                                         'CPCAY', 'AFLYY', 'AZUL', 'DLAKY']
 
-    gen_financial_data_frame('PFE')
+    gen_financial_data_frame('BDRAF')
