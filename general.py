@@ -60,10 +60,11 @@ def check_validity_output_file(output_file_path):
         # Replace and rename old output file if its creation date is at least one month older that today
         if creation_date + one_month < current_date:
             new_dir_name = os.path.join(os.path.dirname(output_file_path), 'old')
-            base_name = os.path.splitext(os.path.basename(output_file_path))[0] + '_' + str(creation_date) + \
-                        os.path.splitext(os.path.basename(output_file_path))[1]
+            base_name = os.path.splitext(os.path.basename(output_file_path))[0]
+            base_name_ext = os.path.splitext(os.path.basename(output_file_path))[1]
+            new_base_name = base_name + '_' + str(creation_date) + base_name_ext
 
-            new_json_file_path = os.path.join(new_dir_name, base_name)
+            new_json_file_path = os.path.join(new_dir_name, new_base_name)
 
             # Replacing and renaming
             shutil.move(output_file_path, new_json_file_path)

@@ -4,11 +4,11 @@ import pathlib
 import pymsgbox
 
 from excel_handler import excel_to_dataframe, create_fs_excel_file
+from dataframe_handler import create_dataframe_from_api
 from general import check_validity_output_file, save_json_request_to_file
 from web_scraping import links_constructor, scrape_tables
-from api_scraping import get_api_request, create_dataframe_from_api
+from api_scraping import get_api_request
 from filter_fs_data import get_rule_number1_ratios
-
 
 # This project focus on scraping financial data from the quickfs.com website and process it to Rule #1 output data
 # Other sites that can be used for scraping are:

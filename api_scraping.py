@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 import pymsgbox
 
 from general import check_request_status, load_quickfs_help_file, gen_compatible_api_dict, \
@@ -61,30 +60,3 @@ def get_api_request(ticker, bool_batch_execution=False):
     data_file = remove_non_existent_data_from_dict(data_file)
 
     return data_file
-
-
-def create_dataframe_from_api(fs_dict):
-    # Create dataframe of quickfs help file (this file contains relevant translation and identification parameters)
-    help_file = load_quickfs_help_file()
-    df_help = pd.DataFrame(help_file["Translation List"])
-
-    # Create year based header
-    period_end_date_list = fs_dict['data']['financials']['annual']['period_end_date']
-    annual_headers = [end_date.split('-')[0] for end_date in period_end_date_list]
-
-    # Create annual dataframe
-    df_annual = pd.DataFrame(fs_dict['data']['financials']['annual']).transpose()
-    df_annual.columns = annual_headers
-
-    # Change index column to normal column
-    df_annual.insert(loc=0, column='API Parameter', value=df_annual.index)
-    df_annual.reset_index(level=0, inplace=True)
-    del df_annual['index']
-
-    # Include new columns in annual dataframe from the help dataframe
-    df = pd.merge(df_help, df_annual, on='API Parameter')
-
-    # Remove duplicate rows
-    df = df.drop_duplicates(subset=['API Parameter'])
-
-    return df
