@@ -1,0 +1,77 @@
+{
+    "data": {
+        "financials": {
+            "annual": {
+                "book_value_per_share": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "cf_cfo": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "cfi_ppe_net": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "cfo_growth": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "eps_diluted": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "eps_diluted_growth": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "fcf": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "fcf_growth": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "income_tax": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "lt_debt": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "market_cap": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "operating_income": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "period_end_date": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "pretax_income": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "price_to_earnings": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "revenue": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "revenue_growth": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "roic": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "shares_diluted": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "st_debt": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "total_assets": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "total_equity": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ],
+                "total_equity_growth": [
+                    "UnsupportedCompanyError: GOOGLE"
+                ]
+            }
+        }
+    }
+}

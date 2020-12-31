@@ -1,5 +1,6 @@
 import json
 import os
+import pathlib
 import pymsgbox
 
 from general import check_validity_output_file, excel_to_dataframe, create_fs_excel_file, save_json_request_to_file
@@ -21,8 +22,9 @@ def gen_financial_data_frame(ticker):
                                    'Select Option', buttons=['API', 'Scraping'])
 
     # Output folders
-    excel_output_folder = os.path.join('financial_files', 'excel')
-    json_output_folder = os.path.join('financial_files', 'json')
+    work_directory = pathlib.Path(__file__).parent.absolute()
+    excel_output_folder = os.path.join(work_directory, 'financial_files', 'excel')
+    json_output_folder = os.path.join(work_directory, 'financial_files', 'json')
     excel_output_path = os.path.join(excel_output_folder, ticker + '.xlsx')
     json_output_path = os.path.join(json_output_folder, ticker + '.json')
 

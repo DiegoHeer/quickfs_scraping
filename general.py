@@ -8,6 +8,7 @@ import shutil
 import openpyxl
 from pandas import ExcelWriter
 from openpyxl.worksheet.table import Table, TableStyleInfo
+import pathlib
 from openpyxl.styles import colors, Font
 
 
@@ -44,7 +45,8 @@ def check_request_status(req):
 
 
 def load_quickfs_help_file():
-    quickfs_help_file = 'quickfs_helpfile.json'
+    current_file_directory = pathlib.Path(__file__).parent.absolute()
+    quickfs_help_file = os.path.join(current_file_directory, 'quickfs_helpfile.json')
     with open(quickfs_help_file, 'r') as file:
         help_file = json.load(file)
 
