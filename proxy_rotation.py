@@ -23,15 +23,13 @@ def get_proxy_list():
 
 
 def fetch(url):
-    proxy_list = get_proxy_list()
-
-    print(url)
-
+    print(f"Url being requested: {url}")
     # First try to fetch request without using proxy rotation
     try:
         req = requests.get(url)
         return req
     except:
+        proxy_list = get_proxy_list()
         for proxy in proxy_list:
             try:
                 print(f'Trying proxy: {proxy}')

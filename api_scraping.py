@@ -1,17 +1,19 @@
 import requests
 import pymsgbox
+import yfinance
+from yahoofinancials import YahooFinancials
 
 from general import check_request_status, load_quickfs_help_file, gen_compatible_api_dict, \
-    remove_non_existent_data_from_dict
+    remove_non_existent_data_from_dict, save_json_request_to_file
 
 
-def get_api_request(ticker, bool_batch_execution=False):
+def get_api_request(ticker, bool_batch=False):
     # Request data from API
     # Be aware! There is a limit for requests per day
     api_key = "0cb07ade55259176dd3ecc9cc11a16f118877d8c"
     link_all_data = f"https://public-api.quickfs.net/v1/data/all-data/{ticker}?api_key={api_key}"
 
-    if not bool_batch_execution:
+    if not bool_batch:
         user_answer = pymsgbox.confirm(
             f"Click on 'OK' if you only want to request the essential data for {ticker}. "
             f"Clicking on 'Cancel' will request all financial data. "
@@ -60,3 +62,12 @@ def get_api_request(ticker, bool_batch_execution=False):
     data_file = remove_non_existent_data_from_dict(data_file)
 
     return data_file
+
+
+def get_general_ticker_data(ticker):
+    # get stock info from api
+    return yfinance.Ticker(ticker).info
+
+
+def get_ttm_eps(ticker):
+    return YahooFinancials(ticker).get_earnings_per_share()

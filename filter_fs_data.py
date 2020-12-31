@@ -1,8 +1,10 @@
 import numpy as np
 import pymsgbox
-from yahoofinancials import YahooFinancials
 
 import web_scraping
+import api_scraping
+
+from dataframe_handler import rule1_results_to_dataframe
 
 
 # Formula for calculating compound growth rates
@@ -166,7 +168,7 @@ def get_moat_ratios(df, ticker):
         # Enter calculated growth rates in dictionary
         moat_dict[f'{key_list_growth_rates[i]} Growth Rate'] = {}
         moat_dict[f'{key_list_growth_rates[i]} Growth Rate'][f'{max_growth_period}-year'] = cagr(cv, max_fv,
-                                                                                                  max_growth_period)
+                                                                                                 max_growth_period)
         moat_dict[f'{key_list_growth_rates[i]} Growth Rate']['5-year'] = cagr(value[-1], value[-6], 5)
         moat_dict[f'{key_list_growth_rates[i]} Growth Rate']['3-year'] = cagr(value[-1], value[-4], 3)
         moat_dict[f'{key_list_growth_rates[i]} Growth Rate']['1-year'] = cagr(value[-1], value[-2], 1)
@@ -184,7 +186,7 @@ def get_moat_ratios(df, ticker):
 
     moat_dict['Debt'] = {}
     moat_dict['Debt']['Current Long-Term Debt'] = current_debt
-    moat_dict['Debt']['Debt Payoff Possible'] = debt_payoff_possible
+    moat_dict['Debt']['Payoff Possible'] = debt_payoff_possible
 
     # Print all MOAT numbers
     print(f'All MOAT numbers for {ticker}')
@@ -257,7 +259,7 @@ def get_moat_ratios(df, ticker):
     print('-' * 100)
 
     # print('Current Long-Term Debt: ' + str(rule1_dict['Debt']['Current Long-Term Debt']))
-    print('Debt Payoff Possible: ' + str(moat_dict['Debt']['Debt Payoff Possible']))
+    print('Debt Payoff Possible: ' + str(moat_dict['Debt']['Payoff Possible']))
 
     return moat_dict
 
@@ -279,44 +281,52 @@ def get_mos_ratio(df, moat_dict, ticker):
     # Current EPS: The TTM Earning Per Share
     # Time (year): For long term investing, it's always 10 years
 
+    # Create mos dictionary for data storage
+    mos_dict = dict()
+
     # Input:
     time = 10
     marr = 0.15
 
     # Calculations
     # Current (TTM) EPS from yahoo finance
-    current_eps = YahooFinancials(ticker).get_earnings_per_share()
+    mos_dict['current_eps'] = api_scraping.get_ttm_eps(ticker)
 
-    if current_eps is None:
-        current_eps = df.loc['eps_diluted'].tolist()[-1]
+    if mos_dict['current_eps'] is None:
+        mos_dict['current_eps'] = df.loc['eps_diluted'].tolist()[-1]
 
     # 5 Year growth rate (per annum) scraped from yahoo finance website
-    analyst_growth_rate = web_scraping.scrape_yahoo_analyst_growth_rate(ticker)
+    mos_dict['analyst_growth_rate'] = web_scraping.scrape_yahoo_analyst_growth_rate(ticker)
 
     # Rest of the calculations described in the notes above
-    equity_growth_rate = np.mean(list(moat_dict['Equity Growth Rate'].values()))
-    eps_growth_rate = min([analyst_growth_rate, equity_growth_rate])
-    future_eps = fv(current_eps, eps_growth_rate, time)
-    average_historical_pe = float(np.mean(df.loc['price_to_earnings'].tolist()[-time:]))
-    default_pe = 2 * eps_growth_rate * 100
-    future_pe = min(default_pe, average_historical_pe)
-    future_market_price = future_pe * future_eps
-    sticker_price = future_market_price / ((1 + marr) ** time)
-    margin_of_safety = 0.5 * sticker_price
+    mos_dict['equity_growth_rate'] = np.mean(list(moat_dict['Equity Growth Rate'].values()))
+    mos_dict['eps_growth_rate'] = min([mos_dict['analyst_growth_rate'], mos_dict['equity_growth_rate']])
+    mos_dict['future_eps'] = fv(mos_dict['current_eps'], mos_dict['eps_growth_rate'], time)
+    mos_dict['average_historical_pe'] = float(np.mean(df.loc['price_to_earnings'].tolist()[-time:]))
+    mos_dict['default_pe'] = 2 * mos_dict['eps_growth_rate'] * 100
+    mos_dict['future_pe'] = min(mos_dict['default_pe'], mos_dict['average_historical_pe'])
+    mos_dict['future_market_price'] = mos_dict['future_pe'] * mos_dict['future_eps']
+    mos_dict['sticker_price'] = mos_dict['future_market_price'] / ((1 + marr) ** time)
+    mos_dict['margin_of_safety'] = 0.5 * mos_dict['sticker_price']
 
     # Print all MOS calculations
     print('-' * 100)
-    print('Current EPS: ' + str(round(margin_of_safety, 2)))
-    print('Future EPS: ' + str(round(future_eps, 2)))
-    print('Analyst Growth Rate: ' + str('{percent:.2%}'.format(percent=analyst_growth_rate)))
-    print('Equity Growth Rate: ' + str('{percent:.2%}'.format(percent=equity_growth_rate)))
-    print('EPS Growth Rate: ' + str('{percent:.2%}'.format(percent=eps_growth_rate)))
-    print('Average Historical Price to Earnings Ratio: ' + str(round(average_historical_pe, 2)))
-    print('Default Price to Earnings Ratio: ' + str(round(default_pe, 2)))
-    print('Future Price to Earnings Ratio: ' + str(round(future_pe, 2)))
-    print('Future Market Price: ' + str(round(future_market_price, 2)))
-    print('Sticker Price: ' + str(round(sticker_price, 2)))
-    print('Margin of Safety: ' + str(round(margin_of_safety, 2)))
+    print(f'All MOS numbers for {ticker}')
+    print('-' * 100)
+    print('Current EPS: ' + str(round(mos_dict['margin_of_safety'], 2)))
+    print('Future EPS: ' + str(round(mos_dict['future_eps'], 2)))
+    print('Analyst Growth Rate: ' + str('{percent:.2%}'.format(percent=mos_dict['analyst_growth_rate'])))
+    print('Equity Growth Rate: ' + str('{percent:.2%}'.format(percent=mos_dict['equity_growth_rate'])))
+    print('EPS Growth Rate: ' + str('{percent:.2%}'.format(percent=mos_dict['eps_growth_rate'])))
+    print('Average Historical Price to Earnings Ratio: ' + str(round(mos_dict['average_historical_pe'], 2)))
+    print('Default Price to Earnings Ratio: ' + str(round(mos_dict['default_pe'], 2)))
+    print('Future Price to Earnings Ratio: ' + str(round(mos_dict['future_pe'], 2)))
+    print('Future Market Price: ' + str(round(mos_dict['future_market_price'], 2)))
+    print('Sticker Price: ' + str(round(mos_dict['sticker_price'], 2)))
+    print('Margin of Safety: ' + str(round(mos_dict['margin_of_safety'], 2)))
+    print('-' * 100)
+
+    return mos_dict
 
 
 def get_rule_number1_ratios(df, ticker):
@@ -329,6 +339,17 @@ def get_rule_number1_ratios(df, ticker):
     # Change API Parameter column to index
     df = df.set_index('API Parameter')
 
+    # Create results dictionary
+    results_dict = dict()
+
     # Execute the functions to obtain the ratios
-    moat_dict = get_moat_ratios(df, ticker)
-    get_mos_ratio(df, moat_dict, ticker)
+    results_dict['moat'] = get_moat_ratios(df, ticker)
+    results_dict['mos'] = get_mos_ratio(df, results_dict['moat'], ticker)
+
+    # Obtain ticker general info
+    results_dict['info'] = api_scraping.get_general_ticker_data(ticker)
+
+    # Create single dataframe from results dictionary
+    results_df = rule1_results_to_dataframe(results_dict)
+
+    return results_df

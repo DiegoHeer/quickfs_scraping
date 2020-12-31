@@ -115,3 +115,32 @@ def create_dataframe_from_api(fs_dict):
     df = df.drop_duplicates(subset=['API Parameter'])
 
     return df
+
+
+def rule1_results_to_dataframe(results_dict):
+    # First create a compatible dictionary that merges al data together with index
+    df_dict = {'Rule #1 Metric': list(), 'Value': list()}
+
+    # MOAT numbers
+    for main_metric, item_dict in results_dict['moat'].items():
+        for key, value in item_dict.items():
+            metric_name = main_metric + " - " + key
+            df_dict['Rule #1 Metric'].append(metric_name)
+            df_dict['Value'].append(value)
+
+    # MOS numbers
+    for metric, value in results_dict['mos'].items():
+        df_dict['Rule #1 Metric'].append(metric)
+        df_dict['Value'].append(value)
+
+    # General company information
+    info_key_list = ['shortName', 'symbol', 'currency', 'country', 'market', 'exchange', 'sector', 'industry',
+                     'website', 'marketCap', 'volume', 'forwardPE']
+    for key in info_key_list:
+        df_dict['Rule #1 Metric'].append(key)
+        df_dict['Value'].append(results_dict['info'][key])
+
+    # Create the dataframe
+    results_df = pd.DataFrame(df_dict)
+
+    return results_df

@@ -67,7 +67,12 @@ def check_validity_output_file(output_file_path):
             new_json_file_path = os.path.join(new_dir_name, new_base_name)
 
             # Replacing and renaming
-            shutil.move(output_file_path, new_json_file_path)
+            try:
+                shutil.move(output_file_path, new_json_file_path)
+            except PermissionError:
+                pymsgbox.alert(f"The old excel file couldn't be replaced. Output file path: {output_file_path}.",
+                               'Error')
+                exit()
 
             # A new output file will need to be generated, so the check validity is false
             return False
@@ -109,3 +114,12 @@ def remove_non_existent_data_from_dict(data_dict):
     data_dict = gen_compatible_api_dict(data_dict)
 
     return data_dict
+
+
+def get_sheet_name(bool_scraping=True, scraping_method=None):
+    if scraping_method == 'Web Scraping' and bool_scraping:
+        return 'financial_statement_scraped'
+    elif scraping_method == 'API' and bool_scraping:
+        return 'financial_statement_api'
+    else:
+        return 'rule1_results'
