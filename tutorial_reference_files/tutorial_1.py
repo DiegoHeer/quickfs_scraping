@@ -96,7 +96,7 @@ def main():
 
     for game in all_games:
         print(game)
-    #     id = game.get('data-ds-appid')
+    #     id = game.get('quickfs_data-ds-appid')
     #     get_hover_data(id)
 
     # Steam url

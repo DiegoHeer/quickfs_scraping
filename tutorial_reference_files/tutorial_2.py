@@ -32,13 +32,13 @@ print(new_list)
 # Read a specific location (Row, Column)
 # print(df.iloc[2, 1])
 
-# Describe data
+# Describe quickfs_data
 # print(df.describe())
 
 # Sorting value
 # print(df.sort_values(['Type 1', 'HP'], ascending=[False, True]))
 
-# Making changes to data
+# Making changes to quickfs_data
 # df['Total'] = df['HP'] + df['Attack'] + df['Defense'] + df['Sp. Atk'] + df['Sp. Def'] + df['Speed']
 
 # Another way to add a column
@@ -56,14 +56,14 @@ print(new_list)
 # Create a new csv file
 # df.to_csv('tutorial_reference_files/modified_pokemon_data.csv')
 
-# Create excel file from data
+# Create excel file from quickfs_data
 # df.to_excel('tutorial_reference_files/modified_pokemon_data.xlsx', index=False)
 
-# Create text file from data
+# Create text file from quickfs_data
 # df.to_csv('tutorial_reference_files/modified_pokemon_data.txt', index=False, sep='\t')
 
 
-# Advanced filtering data
+# Advanced filtering quickfs_data
 # new_df = df.loc[(df['Type 1'] == 'Grass') & (df['Type 2'] == 'Poison') & (df['HP'] > 70)]
 
 # Reset index of new dataframe
@@ -73,7 +73,7 @@ print(new_list)
 # filtering with cells that contain a specific substring
 # print(df.loc[df['Name'].str.contains('Mega')])
 
-# removing specific data
+# removing specific quickfs_data
 # print(df.loc[~df['Name'].str.contains('Mega')])
 
 # Filtering using regular expressions
@@ -101,7 +101,7 @@ print(new_list)
 # print(df.groupby(['Type 1']).count().sort_values('#', ascending=False))
 # print(df.groupby(['Type 1', 'Type 2']).count().sort_values('#', ascending=False)['Count'])
 
-# Working with large amounts of data
+# Working with large amounts of quickfs_data
 
 # new_df = pd.DataFrame(columns=df.columns)
 #

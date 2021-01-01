@@ -4,13 +4,13 @@ import yfinance
 from yahoofinancials import YahooFinancials
 
 from general import check_request_status, load_quickfs_help_file, gen_compatible_api_dict, \
-    remove_non_existent_data_from_dict, save_json_request_to_file
+    remove_non_existent_data_from_dict, save_json_request_to_file, get_quickfs_key
 
 
 def get_api_request(ticker, bool_batch=False):
     # Request data from API
     # Be aware! There is a limit for requests per day
-    api_key = "0cb07ade55259176dd3ecc9cc11a16f118877d8c"
+    api_key = get_quickfs_key("API")
     link_all_data = f"https://public-api.quickfs.net/v1/data/all-data/{ticker}?api_key={api_key}"
 
     if not bool_batch:

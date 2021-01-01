@@ -3,7 +3,7 @@ import os
 import pathlib
 import pymsgbox
 
-from excel_handler import excel_to_dataframe, dataframe_to_excel
+from excel_handler import excel_to_dataframe, dataframe_to_excel, excel_sheet_exists
 from dataframe_handler import create_dataframe_from_api
 from general import check_validity_output_file, save_json_request_to_file
 from web_scraping import links_constructor, scrape_tables
@@ -28,22 +28,24 @@ def gen_financial_data_frame(ticker, bool_batch=False):
 
     # Output folders
     work_directory = pathlib.Path(__file__).parent.absolute()
-    excel_output_folder = os.path.join(work_directory, 'financial_files', 'excel')
-    json_output_folder = os.path.join(work_directory, 'financial_files', 'json')
+    excel_output_folder = os.path.join(work_directory, '../financial_files', 'excel')
+    json_output_folder = os.path.join(work_directory, '../financial_files', 'json')
     excel_output_path = os.path.join(excel_output_folder, ticker + '.xlsx')
     json_output_path = os.path.join(json_output_folder, ticker + '.json')
 
     if scraping_method == 'Web Scraping':
         pymsgbox.alert("Be aware that this option my not work due to possible scraping restrictions from website.")
 
-        if not check_validity_output_file(excel_output_path):
+        if not check_validity_output_file(excel_output_path) \
+                or not excel_sheet_exists(excel_output_path, source=scraping_method):
             links = links_constructor(ticker)
             df_fs = scrape_tables(links)
         else:
             df_fs = excel_to_dataframe(excel_output_path, source=scraping_method)
 
     else:
-        if not check_validity_output_file(json_output_path):
+        if not check_validity_output_file(json_output_path) \
+                or not excel_sheet_exists(excel_output_path, source=scraping_method):
             json_file = get_api_request(ticker, bool_batch=bool_batch)
             save_json_request_to_file(json_file, json_output_path)
         else:
@@ -68,4 +70,4 @@ if __name__ == '__main__':
                                         'RYCEF', 'EADSF', 'ERJ', 'BDRAF', 'HXL', 'MELI', 'LTMAQ', 'DAL', 'ESYJY',
                                         'CPCAY', 'AFLYY', 'AZUL', 'DLAKY']
 
-    gen_financial_data_frame('BDRAF')
+    gen_financial_data_frame('EA')

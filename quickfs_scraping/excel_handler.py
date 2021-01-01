@@ -101,3 +101,17 @@ def excel_data_to_table(excel_output_path, sheet_name, df):
     wb[sheet_name].add_table(tab)
     wb.save(excel_output_path)
     wb.close()
+
+
+def excel_sheet_exists(excel_output_path, source='Web Scraping'):
+    if check_validity_output_file(excel_output_path):
+        wb = openpyxl.load_workbook(excel_output_path, read_only=True)
+        sheet_name = get_sheet_name(scraping_method=source)
+        if sheet_name in wb.sheetnames:
+            wb.close()
+            return True
+        else:
+            wb.close()
+            return False
+    else:
+        return False

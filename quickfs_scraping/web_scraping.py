@@ -2,16 +2,13 @@ from bs4 import BeautifulSoup
 import pymsgbox
 
 from dataframe_handler import web_scrape_to_dataframe, merge_fs_dataframes
-from general import check_request_status
+from general import check_request_status, get_quickfs_key
 from proxy_rotation import fetch
 
 
 def links_constructor(ticker):
     base_url = r"https://api.quickfs.net/stocks/"
-    api_key = r"grL0gNYoMoLUB1ZoAKLfhXkoMoLODiO1WoL9.grLtk3PoMoLmqFEsMasbNK9fkXudkNBtR2jpkr5dINZoAKLtRNZoMl" \
-              r"G2PQuiWQknWJOcOpEfqXGoMwcoqNWaka9tIKO6OlG1MQk0OosoIS1fySsoMoLuySBwh2tbhpV0yXVdyXBakuHwhSVthK" \
-              r"5lh20oAKLsRNWiq29rIKO6OaWIJQufWG1Vq1RrZuWSIKOcOwHryNIthXBwICO6PKsokpBwyS9dDFLtqoO6grLBDrO6PCs" \
-              r"oZ0GoMlH9vN0.sbxSI5du4jS2FlR0-qktBT62siUOb1_YMMWYs3GDYou"
+    api_key = get_quickfs_key("Web Scraping")
 
     # There are 5 types of tables that will be extracted: overview, income statement, balance sheet, cash flow and
     # key ratios

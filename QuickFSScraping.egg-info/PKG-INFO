@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: QuickFSScraping
+Version: 1.0.0
+Summary: UNKNOWN
+Home-page: www.github.com/DiegoHeer
+Author: Diego Heer
+Author-email: diegojonathanheer@gmail.com
+License: MIT
+Description: QuickFS Scraping
+        ============================
+        
+        This project should be used as a tool to gather
+        financial data from us market traded equities. The
+        main source for scraping the data is a site called
+        [QuickFS](https://quickfs.net/).
+        
+        An account is necessary, and API keys should be 
+        retrieved for API scraping and one for web scraping.
+        Be aware that excessive web scraping can cause
+        being blocked from QuickFS. Also know that the free
+        membership has a limited amount of quotes. Excessive
+        api scraping can result in exceeding the daily quota.
+        
+        ### setup: 
+        ```bash
+        pip install -r requirements.txt
+        
+        quickfs_data > quickfs_keys.json : change key values
+        ```
+        
+        ### Usage:
+        ```bash
+        quickfs_scraping > main.py: to execute the code
+        
+        ```
+        Copyright & License
+        -------------------
+        
+          * Copyright 2021, Diego Heer
+          * License: MIT
+        
+Keywords: Stocks,Financial Analysis,Rule #1
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

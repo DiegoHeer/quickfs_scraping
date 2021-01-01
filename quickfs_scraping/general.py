@@ -41,12 +41,24 @@ def check_request_status(req):
 
 
 def load_quickfs_help_file():
-    current_file_directory = pathlib.Path(__file__).parent.absolute()
-    quickfs_help_file = os.path.join(current_file_directory, 'quickfs_helpfile.json')
+    project_root_directory = os.path.split(os.environ['VIRTUAL_ENV'])[0]
+    quickfs_help_file = os.path.join(project_root_directory, 'quickfs_data', 'quickfs_helpfile.json')
     with open(quickfs_help_file, 'r') as file:
         help_file = json.load(file)
 
     return help_file
+
+
+def get_quickfs_key(source="API"):
+    project_root_directory = os.path.split(os.environ['VIRTUAL_ENV'])[0]
+    quickfs_key_file = os.path.join(project_root_directory, 'quickfs_data', 'quickfs_keys.json')
+    with open(quickfs_key_file, 'r') as file:
+        key_file = json.load(file)
+
+    if source == 'Web Scraping':
+        return key_file['web_scraping_key']
+    else:
+        return key_file['api_key']
 
 
 def is_file_available(file_path):
