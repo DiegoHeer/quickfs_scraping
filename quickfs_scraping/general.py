@@ -5,7 +5,6 @@ from datetime import datetime
 from dateutil.relativedelta import *
 import pymsgbox
 import shutil
-import pathlib
 
 
 def check_request_status(req):

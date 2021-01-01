@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from general import load_quickfs_help_file
+from quickfs_scraping.general import load_quickfs_help_file
 
 
 def web_scrape_to_dataframe(table_dict):

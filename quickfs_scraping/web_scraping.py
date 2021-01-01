@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import pymsgbox
 
-from dataframe_handler import web_scrape_to_dataframe, merge_fs_dataframes
-from general import check_request_status, get_quickfs_key
-from proxy_rotation import fetch
+from quickfs_scraping.dataframe_handler import web_scrape_to_dataframe, merge_fs_dataframes
+from quickfs_scraping.general import check_request_status, get_quickfs_key
+from quickfs_scraping.proxy_rotation import fetch
 
 
 def links_constructor(ticker):

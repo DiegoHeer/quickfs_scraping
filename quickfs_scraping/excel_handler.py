@@ -6,7 +6,7 @@ from pandas import ExcelWriter
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.styles import colors, Font
 
-from general import check_validity_output_file, get_sheet_name
+from quickfs_scraping.general import check_validity_output_file, get_sheet_name
 
 
 def excel_to_dataframe(excel_output_path, source='Web Scraping'):

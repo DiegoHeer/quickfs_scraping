@@ -3,12 +3,12 @@ import os
 import pathlib
 import pymsgbox
 
-from excel_handler import excel_to_dataframe, dataframe_to_excel, excel_sheet_exists
-from dataframe_handler import create_dataframe_from_api
-from general import check_validity_output_file, save_json_request_to_file
-from web_scraping import links_constructor, scrape_tables
-from api_scraping import get_api_request
-from filter_fs_data import get_rule_number1_ratios
+from quickfs_scraping.excel_handler import excel_to_dataframe, dataframe_to_excel, excel_sheet_exists
+from quickfs_scraping.dataframe_handler import create_dataframe_from_api
+from quickfs_scraping.general import check_validity_output_file, save_json_request_to_file
+from quickfs_scraping.web_scraping import links_constructor, scrape_tables
+from quickfs_scraping.api_scraping import get_api_request
+from quickfs_scraping.filter_fs_data import get_rule_number1_ratios
 
 
 # This project focus on scraping financial data from the quickfs.com website and process it to Rule #1 output data
@@ -16,9 +16,7 @@ from filter_fs_data import get_rule_number1_ratios
 # https://www.rocketfinancial.com/
 
 
-def gen_financial_data_frame(ticker, bool_batch=False):
-    # Financial Table Types that will be scraped
-
+def app(ticker, bool_batch=False):
     # Let user choose the solution for getting the data: Either scraping or using API
     if not bool_batch:
         scraping_method = pymsgbox.confirm(f'What method do you want to use to get the financial data from {ticker}?',
@@ -65,9 +63,4 @@ def gen_financial_data_frame(ticker, bool_batch=False):
 
 
 if __name__ == '__main__':
-    list_with_tickers_from_watchlist = ['STX', 'CRSR', 'LOGI', 'GOOGL', 'NVDA', 'CSCO', 'QCOM', 'ATVI',
-                                        'EBAY', 'EA', 'RYAAY', 'SSNGY', 'GPRO', 'CSIOY', 'PINS', 'SPOT', 'ANSS', 'BA',
-                                        'RYCEF', 'EADSF', 'ERJ', 'BDRAF', 'HXL', 'MELI', 'LTMAQ', 'DAL', 'ESYJY',
-                                        'CPCAY', 'AFLYY', 'AZUL', 'DLAKY']
-
-    gen_financial_data_frame('EA')
+    app('EA')

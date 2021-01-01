@@ -1,10 +1,9 @@
 import numpy as np
 import pymsgbox
 
-import web_scraping
-import api_scraping
-
-from dataframe_handler import rule1_results_to_dataframe
+from quickfs_scraping.web_scraping import scrape_yahoo_analyst_growth_rate
+from quickfs_scraping.api_scraping import get_general_ticker_data, get_ttm_eps
+from quickfs_scraping.dataframe_handler import rule1_results_to_dataframe
 
 
 # Formula for calculating compound growth rates
@@ -281,13 +280,13 @@ def get_mos_ratio(df, moat_dict, ticker):
 
     # Calculations
     # Current (TTM) EPS from yahoo finance
-    mos_dict['current_eps'] = api_scraping.get_ttm_eps(ticker)
+    mos_dict['current_eps'] = get_ttm_eps(ticker)
 
     if mos_dict['current_eps'] is None:
         mos_dict['current_eps'] = df.loc['eps_diluted'].tolist()[-1]
 
     # 5 Year growth rate (per annum) scraped from yahoo finance website
-    mos_dict['analyst_growth_rate'] = web_scraping.scrape_yahoo_analyst_growth_rate(ticker)
+    mos_dict['analyst_growth_rate'] = scrape_yahoo_analyst_growth_rate(ticker)
 
     # Rest of the calculations described in the notes above
     mos_dict['equity_growth_rate'] = np.mean(list(moat_dict['Equity Growth Rate'].values()))
@@ -338,7 +337,7 @@ def get_rule_number1_ratios(df, ticker):
     results_dict['mos'] = get_mos_ratio(df, results_dict['moat'], ticker)
 
     # Obtain ticker general info
-    results_dict['info'] = api_scraping.get_general_ticker_data(ticker)
+    results_dict['info'] = get_general_ticker_data(ticker)
 
     # Create single dataframe from results dictionary
     results_df = rule1_results_to_dataframe(results_dict)
