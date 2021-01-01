@@ -292,7 +292,13 @@ def get_mos_ratio(df, moat_dict, ticker):
     mos_dict['equity_growth_rate'] = np.mean(list(moat_dict['Equity Growth Rate'].values()))
     mos_dict['eps_growth_rate'] = min([mos_dict['analyst_growth_rate'], mos_dict['equity_growth_rate']])
     mos_dict['future_eps'] = fv(mos_dict['current_eps'], mos_dict['eps_growth_rate'], time)
+
     mos_dict['average_historical_pe'] = float(np.mean(df.loc['price_to_earnings'].tolist()[-time:]))
+    # Remove negative PE numbers to calculate average historical PE
+    if mos_dict['average_historical_pe'] < 0:
+        mos_dict['average_historical_pe'] = float(
+            np.mean([pe for pe in df.loc['price_to_earnings'].tolist()[-time:] if pe > 0]))
+
     mos_dict['default_pe'] = 2 * mos_dict['eps_growth_rate'] * 100
     mos_dict['future_pe'] = min(mos_dict['default_pe'], mos_dict['average_historical_pe'])
     mos_dict['future_market_price'] = mos_dict['future_pe'] * mos_dict['future_eps']
