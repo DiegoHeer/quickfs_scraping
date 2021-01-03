@@ -1,8 +1,0 @@
-LICENSE.txt
-MANIFEST.in
-README.md
-setup.py
-QuickFSScraping.egg-info/PKG-INFO
-QuickFSScraping.egg-info/SOURCES.txt
-QuickFSScraping.egg-info/dependency_links.txt
-QuickFSScraping.egg-info/top_level.txt

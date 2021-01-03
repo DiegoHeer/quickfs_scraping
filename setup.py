@@ -39,5 +39,6 @@ setup(
     # List of packages to install with this one
     install_requires=[],
     # https://pypi.org/classifiers/
-    classifiers=[]
+    classifiers=[],
+    zip_safe=True
 )

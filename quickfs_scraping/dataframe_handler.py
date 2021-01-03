@@ -139,7 +139,7 @@ def rule1_results_to_dataframe(results_dict):
 
     # General company information
     info_key_list = ['shortName', 'symbol', 'currency', 'country', 'market', 'exchange', 'sector', 'industry',
-                     'website', 'marketCap', 'volume', 'forwardPE']
+                     'website', 'marketCap', 'volume', 'forwardPE', 'previousClose']
     for key in info_key_list:
         df_dict['Rule #1 Metric'].append(key)
         df_dict['Value'].append(results_dict['info'][key])

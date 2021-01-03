@@ -4,7 +4,7 @@ import yfinance
 from yahoofinancials import YahooFinancials
 
 from quickfs_scraping.general import check_request_status, load_quickfs_help_file, gen_compatible_api_dict, \
-    remove_non_existent_data_from_dict, save_json_request_to_file, get_quickfs_key
+    remove_non_existent_data_from_dict, get_quickfs_key
 
 
 def get_api_request(ticker, bool_batch=False):

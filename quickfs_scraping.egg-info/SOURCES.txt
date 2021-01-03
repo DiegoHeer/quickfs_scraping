@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+quickfs_scraping.egg-info/PKG-INFO
+quickfs_scraping.egg-info/SOURCES.txt
+quickfs_scraping.egg-info/dependency_links.txt
+quickfs_scraping.egg-info/top_level.txt
+quickfs_scraping.egg-info/zip-safe
