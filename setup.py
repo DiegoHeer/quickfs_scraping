@@ -18,13 +18,13 @@ setup(
     packages=find_packages(','),
     # Start with a small number and increase it with
     # every change you make https://semver.org
-    version='1.0.0',
+    version='0.0.1',
     # Chose a license from here: https: //
     # help.github.com / articles / licensing - a -
     # repository. For example: MIT
     license='MIT',
     # Short description of your library
-    description='',
+    description='A package to scrape financial data using tickers from the QuickFS website',
     # Long description of your library
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -39,6 +39,10 @@ setup(
     # List of packages to install with this one
     install_requires=[],
     # https://pypi.org/classifiers/
-    classifiers=[],
-    zip_safe=True
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent"
+    ],
+    zip_safe=False
 )

@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: quickfs-scraping
-Version: 1.0.0
-Summary: UNKNOWN
+Version: 0.0.1
+Summary: A package to scrape financial data using tickers from the QuickFS website
 Home-page: www.github.com/DiegoHeer
 Author: Diego Heer
 Author-email: diegojonathanheer@gmail.com
@@ -41,4 +41,7 @@ Description: QuickFS Scraping
         
 Keywords: Stocks,Financial Analysis,Rule #1
 Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
