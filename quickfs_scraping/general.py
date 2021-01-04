@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import os
+from os.path import dirname
 from datetime import datetime
 from dateutil.relativedelta import *
 import pymsgbox
@@ -40,7 +41,7 @@ def check_request_status(req):
 
 
 def load_quickfs_help_file():
-    project_root_directory = os.path.split(os.environ['VIRTUAL_ENV'])[0]
+    project_root_directory = dirname(dirname(__file__))
     quickfs_help_file = os.path.join(project_root_directory, 'quickfs_data', 'quickfs_helpfile.json')
     with open(quickfs_help_file, 'r') as file:
         help_file = json.load(file)
@@ -49,7 +50,7 @@ def load_quickfs_help_file():
 
 
 def get_quickfs_key(source="API"):
-    project_root_directory = os.path.split(os.environ['VIRTUAL_ENV'])[0]
+    project_root_directory = dirname(dirname(__file__))
     quickfs_key_file = os.path.join(project_root_directory, 'quickfs_data', 'quickfs_keys.json')
     with open(quickfs_key_file, 'r') as file:
         key_file = json.load(file)

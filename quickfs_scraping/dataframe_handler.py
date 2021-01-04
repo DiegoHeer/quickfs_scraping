@@ -58,7 +58,7 @@ def merge_fs_dataframes(df_dict):
         df = df.dropna(axis=0, how='all')
 
         # # Create a 'TTM' column on the dataframes that don't have it
-        if not 'TTM' in df.columns:
+        if 'TTM' not in df.columns:
             df['TTM'] = 'NaN'
 
         # Include column with the financial statement type

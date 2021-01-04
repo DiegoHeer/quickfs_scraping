@@ -1,5 +1,5 @@
-from quickfs_scraping import main
+from quickfs_scraping import process
 
 if __name__ == '__main__':
     ticker = input("Enter a valid ticker: ")
-    main.app(ticker.upper())
+    process.run(ticker.upper())

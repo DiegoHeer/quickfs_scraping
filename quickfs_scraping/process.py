@@ -16,7 +16,7 @@ from quickfs_scraping.filter_fs_data import get_rule_number1_ratios
 # https://www.rocketfinancial.com/
 
 
-def app(ticker, bool_batch=False):
+def run(ticker, bool_batch=False):
     # Let user choose the solution for getting the data: Either scraping or using API
     if not bool_batch:
         scraping_method = pymsgbox.confirm(f'What method do you want to use to get the financial data from {ticker}?',
@@ -63,4 +63,4 @@ def app(ticker, bool_batch=False):
 
 
 if __name__ == '__main__':
-    app('EA')
+    run('EA')

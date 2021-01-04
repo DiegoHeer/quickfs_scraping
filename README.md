@@ -22,7 +22,7 @@ quickfs_data > quickfs_keys.json : change key values
 
 ### Usage:
 ```bash
-quickfs_scraping > main.py: to execute the code
+quickfs_scraping > process.py: to execute the code
 
 ```
 Copyright & License
